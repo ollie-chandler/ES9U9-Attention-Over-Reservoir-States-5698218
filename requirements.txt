@@ -1,0 +1,35 @@
+# Attention Over Reservoir States — runtime dependencies
+#
+#   conda create -n esn-nsynth python=3.11.15
+#   conda activate esn-nsynth
+#   pip install -r requirements.txt
+
+# --- reservoir computing ---------------------------------------------
+reservoirpy==0.4.1
+
+# --- numerical and scientific core -----------------------------------
+numpy==2.3.5
+scipy==1.15.3
+scikit-learn==1.8.0
+joblib==1.5.3
+
+# --- audio front end --------------------------------------------------
+librosa==0.11.0
+soundfile==0.13.1
+audioread==3.1.0
+numba==0.64.0
+soxr==1.0.0
+
+# --- neural readouts --------------------------------------------------
+torch==2.11.0
+
+# --- figures and tables ----------------------------------------------
+matplotlib==3.10.8
+pandas==3.0.1
+
+# --- notebook environment --------------------------------------------
+jupyterlab==4.5.6
+notebook==7.5.5
+ipykernel==7.2.0
+ipython==9.10.0
+nbformat==5.10.4

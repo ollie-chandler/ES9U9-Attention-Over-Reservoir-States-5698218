@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "selection_status": "locked",
+  "selection_metric": "macro_f1",
+  "reservoir_seed": 42,
+  "feature_cfg": {
+    "sr": 16000,
+    "n_mels": 64,
+    "n_fft": 1024,
+    "hop_length": 512,
+    "max_t": 125,
+    "use_deltas": true,
+    "delta_after_length_fix": true
+  },
+  "feature_tag": "8cfbd6d555",
+  "scaler_cfg": {
+    "feature_tag": "8cfbd6d555",
+    "scaler_n_examples": 3000,
+    "seed": 42
+  },
+  "scaler_tag": "2e0a669124",
+  "feature_scaler_path": "cache_final/mel_8cfbd6d555/feature_scaler_2e0a669124.joblib",
+  "reservoir_cfg": {
+    "units": 1000,
+    "sr": 0.99,
+    "lr": 0.05,
+    "input_scaling": 0.2,
+    "rc_connectivity": 0.1
+  },
+  "selected_validation": {
+    "acc": 0.6265183782931062,
+    "macro_f1": 0.6017123878077728,
+    "balanced_acc": 0.6324534914584826,
+    "ridge_alpha": 100.0,
+    "stage": "stage3_ridge_extension"
+  },
+  "search_design": {
+    "stage1_units": 500,
+    "train_subset_n": 4000,
+    "validation_subset_n": 2000,
+    "sr_grid": [
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "lr_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.3
+    ],
+    "base_input_scaling_grid": [
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "extended_input_scaling_grid": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "boundary_dynamics_pairs": [
+      [
+        0.8,
+        0.1
+      ],
+      [
+        0.99,
+        0.3
+      ],
+      [
+        0.7,
+        0.1
+      ],
+      [
+        0.95,
+        0.1
+      ],
+      [
+        0.99,
+        0.05
+      ]
+    ],
+    "top_k_dynamics": 5,
+    "size_grid": [
+      200,
+      500,
+      700,
+      1000
+    ],
+    "confirmation_enabled": true,
+    "confirmation_train_n": 12000,
+    "confirmation_valid_n": 12678,
+    "ridge_alphas": [
+      1e-10,
+      1e-09,
+      1e-08,
+      1e-07,
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      300.0,
+      1000.0,
+      3000.0,
+      10000.0
+    ],
+    "ridge_solver": "lsqr",
+    "ridge_tol": 1e-06,
+    "ridge_max_iter": 20000
+  },
+  "ridge_extension": {
+    "completed": true,
+    "selection_metric": "macro_f1",
+    "tested_extension_alphas": [
+      100.0,
+      300.0,
+      1000.0,
+      3000.0,
+      10000.0
+    ],
+    "selected_alpha": 100.0,
+    "selected_alpha_is_boundary": false,
+    "recommendation_path": "results_sweep_final/ridge_extension_recommendation.json",
+    "alpha_curve_path": "results_sweep_final/reservoir_stage3_ridge_extension_alpha_curves.csv",
+    "candidate_results_path": "results_sweep_final/reservoir_stage3_ridge_extension.csv"
+  }
+}

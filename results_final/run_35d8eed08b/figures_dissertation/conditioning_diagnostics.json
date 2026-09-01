@@ -1,0 +1,32 @@
+{
+  "run_tag": "35d8eed08b",
+  "state_tag": "242d8f6835",
+  "control_tag": "5d3b246266",
+  "source": "complete training partition; mean, maximum and final-state pooling as in Section 3.2; pooled dimensions standardised",
+  "class_weighted_gram": false,
+  "note": "The Gram matrices do not include the class weights used during Ridge fitting. Reservoir states were retained at float16 precision, so the conditioning values are diagnostic rather than exact properties of the weighted optimisation problem.",
+  "results": [
+    {
+      "Representation": "Echo State Network",
+      "Training rows": 283704,
+      "Pooled dimensions": 3000,
+      "Largest eigenvalue": 313852542.6487,
+      "Smallest eigenvalue": 164.20224329,
+      "Gram condition number": 1911000.0,
+      "Condition number resolved": true,
+      "Numerical rank": 3000,
+      "Entropy-based effective rank": 26.75
+    },
+    {
+      "Representation": "Non-recurrent control",
+      "Training rows": 283704,
+      "Pooled dimensions": 3000,
+      "Largest eigenvalue": 164567763.0923,
+      "Smallest eigenvalue": 423.123911,
+      "Gram condition number": 388900.0,
+      "Condition number resolved": true,
+      "Numerical rank": 3000,
+      "Entropy-based effective rank": 95.46
+    }
+  ]
+}

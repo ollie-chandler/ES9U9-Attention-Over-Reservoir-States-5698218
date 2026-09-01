@@ -1,0 +1,57 @@
+{
+  "selection_metric": "macro_f1",
+  "extension_alphas": [
+    100.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "selected_candidate": {
+    "stage": "stage3_ridge_extension",
+    "units": 1000,
+    "sr": 0.99,
+    "lr": 0.05,
+    "input_scaling": 0.2,
+    "alpha": 100.0,
+    "val_acc": 0.6265183782931062,
+    "val_macro_f1": 0.6017123878077728,
+    "val_balanced_acc": 0.6324534914584826
+  },
+  "all_candidates": [
+    {
+      "stage": "stage3_ridge_extension",
+      "units": 1000,
+      "sr": 0.99,
+      "lr": 0.05,
+      "input_scaling": 0.2,
+      "alpha": 100.0,
+      "val_acc": 0.6265183782931062,
+      "val_macro_f1": 0.6017123878077728,
+      "val_balanced_acc": 0.6324534914584826
+    },
+    {
+      "stage": "stage3_ridge_extension",
+      "units": 700,
+      "sr": 0.8,
+      "lr": 0.1,
+      "input_scaling": 0.1,
+      "alpha": 10.0,
+      "val_acc": 0.6106641426092444,
+      "val_macro_f1": 0.5753178952858026,
+      "val_balanced_acc": 0.6041353742063131
+    },
+    {
+      "stage": "stage3_ridge_extension",
+      "units": 700,
+      "sr": 0.99,
+      "lr": 0.05,
+      "input_scaling": 0.3,
+      "alpha": 100.0,
+      "val_acc": 0.6120839249092916,
+      "val_macro_f1": 0.5846781772018285,
+      "val_balanced_acc": 0.625858622448118
+    }
+  ],
+  "pooled_summary_cache": "/home/olliechandler/ESN-NSYNTH/results_sweep_final/confirmation_pooled_summaries"
+}

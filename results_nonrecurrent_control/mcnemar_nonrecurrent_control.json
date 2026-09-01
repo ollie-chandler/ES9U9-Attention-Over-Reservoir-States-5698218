@@ -1,0 +1,18 @@
+{
+  "vs_acoustic_ridge": {
+    "b": 909,
+    "c": 212,
+    "discordant": 1121,
+    "chi_square_corrected": 432.12845673505797,
+    "p_corrected": 5.592838104614293e-96,
+    "p_exact": 3.4242342342939685e-103
+  },
+  "vs_esn_state_ridge": {
+    "b": 244,
+    "c": 365,
+    "discordant": 609,
+    "chi_square_corrected": 23.645320197044335,
+    "p_corrected": 1.1582724270631095e-06,
+    "p_exact": 1.0720555577313188e-06
+  }
+}

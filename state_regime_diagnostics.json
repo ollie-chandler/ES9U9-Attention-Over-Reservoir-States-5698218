@@ -1,0 +1,150 @@
+{
+  "generated_by": "04_Dissertation_Figures.ipynb",
+  "sample": {
+    "split": "train",
+    "seed": 42,
+    "selection_method": "numpy.random.default_rng(seed).choice(n_train, size=500, replace=False)",
+    "recordings": 500,
+    "frames_per_recording": 125,
+    "states_per_system": 62500,
+    "units_per_state_system": 1000,
+    "state_values_per_system": 62500000,
+    "same_recordings_for_all_systems": true,
+    "training_population_size": 283704
+  },
+  "state_source": {
+    "echo_state_network": "freshly regenerated raw before state standardisation",
+    "non_recurrent_control": "freshly regenerated raw before state standardisation",
+    "acoustic": "cached acoustic frames transformed with the existing training feature scaler, matching the Ridge input path"
+  },
+  "systems": {
+    "echo_state_network": {
+      "state_tag": "242d8f6835",
+      "config": {
+        "units": 1000,
+        "sr": 0.99,
+        "lr": 0.05,
+        "input_scaling": 0.2,
+        "rc_connectivity": 0.1
+      },
+      "raw_state_magnitude": {
+        "mean_absolute_state_value": 0.29748405198177563,
+        "fraction_abs_above_0_9": 0.006606064
+      },
+      "temporal_variability": {
+        "definition": "Population SD across 125 frames per recording and unit.",
+        "ddof": 0,
+        "mean": 0.19022813839017785,
+        "p10": 0.09115130647051789,
+        "median": 0.17915624423554255,
+        "p90": 0.3047397046160619
+      },
+      "pooling_component_redundancy": {
+        "definition": "Pearson correlation across 500 recordings for each unit, averaged over valid units.",
+        "mean_vs_max": 0.8666344034747555,
+        "mean_vs_final": 0.6651848650749584,
+        "max_vs_final": 0.6423813085015625,
+        "valid_units": {
+          "mean_vs_max": 1000,
+          "mean_vs_final": 1000,
+          "max_vs_final": 1000
+        },
+        "total_units": 1000
+      },
+      "pooled_effective_dimensionality": {
+        "original_dimensions": 3000,
+        "components_95": 91,
+        "fraction_95": 0.030333333333333334,
+        "components_99": 261,
+        "fraction_99": 0.087
+      },
+      "variance_decomposition": {
+        "between_class_variance": 0.010208441264291367,
+        "within_class_variance": 0.06506451448874588,
+        "between_within_ratio": 0.13491471509652778
+      },
+      "lag_one_autocorrelation": 0.9986153606268242
+    },
+    "non_recurrent_control": {
+      "control_tag": "5d3b246266",
+      "config": {
+        "base_reservoir_config": {
+          "units": 1000,
+          "sr": 0.99,
+          "lr": 0.05,
+          "input_scaling": 0.2,
+          "rc_connectivity": 0.1
+        },
+        "recurrent_matrix": "zeroed",
+        "leak_rate": 1.0,
+        "matched_input_weights": true
+      },
+      "raw_state_magnitude": {
+        "mean_absolute_state_value": 0.39309496548672634,
+        "fraction_abs_above_0_9": 0.064253904
+      },
+      "temporal_variability": {
+        "definition": "Population SD across 125 frames per recording and unit.",
+        "ddof": 0,
+        "mean": 0.367030672273811,
+        "p10": 0.20045397211323207,
+        "median": 0.3613291887433593,
+        "p90": 0.5371735939223181
+      },
+      "pooling_component_redundancy": {
+        "definition": "Pearson correlation across 500 recordings for each unit, averaged over valid units.",
+        "mean_vs_max": 0.29653843049035505,
+        "mean_vs_final": 0.07508981233412712,
+        "max_vs_final": 0.010352917158709776,
+        "valid_units": {
+          "mean_vs_max": 1000,
+          "mean_vs_final": 1000,
+          "max_vs_final": 1000
+        },
+        "total_units": 1000
+      },
+      "pooled_effective_dimensionality": {
+        "original_dimensions": 3000,
+        "components_95": 176,
+        "fraction_95": 0.058666666666666666,
+        "components_99": 342,
+        "fraction_99": 0.114
+      },
+      "variance_decomposition": {
+        "between_class_variance": 0.006116925300986136,
+        "within_class_variance": 0.045255247441792934,
+        "between_within_ratio": 0.09971433930509357
+      },
+      "lag_one_autocorrelation": 0.902752445443957
+    },
+    "control_after_smoothing": {
+      "alpha": 0.05,
+      "variance_decomposition": {
+        "between_class_variance": 0.005717084877069065,
+        "within_class_variance": 0.03750619664021066,
+        "between_within_ratio": 0.13005390318465107
+      },
+      "bw_gap_to_esn_closed_percent": 86.19102267351488
+    },
+    "acoustic": {
+      "feature_tag": "8cfbd6d555",
+      "pooled_effective_dimensionality": {
+        "original_dimensions": 576,
+        "components_95": 97,
+        "fraction_95": 0.1684027777777778,
+        "components_99": 192,
+        "fraction_99": 0.3333333333333333
+      },
+      "variance_decomposition": {
+        "between_class_variance": 0.08710547418151189,
+        "within_class_variance": 0.7300089204344691,
+        "between_within_ratio": 0.1248466776302253
+      }
+    }
+  },
+  "pca": {
+    "column_standardisation": "sklearn.preprocessing.StandardScaler defaults",
+    "solver": "sklearn.decomposition.PCA(svd_solver=full)",
+    "threshold_rule": "smallest component count with cumulative explained variance >= threshold"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "sampling_seed": 42,
+  "sampling_population": "definitive cached NSynth training split",
+  "sampled_example": {
+    "index": 25320,
+    "key": "bass_synthetic_043-050-100",
+    "family": "Bass"
+  },
+  "family_examples": {
+    "Bass": {
+      "index": 50673,
+      "key": "bass_synthetic_106-046-127"
+    },
+    "Brass": {
+      "index": 73770,
+      "key": "brass_acoustic_042-077-050"
+    },
+    "Flute": {
+      "index": 81999,
+      "key": "flute_acoustic_020-056-127"
+    },
+    "Guitar": {
+      "index": 101077,
+      "key": "guitar_electronic_007-035-025"
+    },
+    "Keyboard": {
+      "index": 164105,
+      "key": "keyboard_electronic_097-065-050"
+    },
+    "Mallet": {
+      "index": 174372,
+      "key": "mallet_acoustic_007-036-127"
+    },
+    "Organ": {
+      "index": 229677,
+      "key": "organ_electronic_078-055-100"
+    },
+    "Reed": {
+      "index": 242913,
+      "key": "reed_acoustic_013-048-075"
+    },
+    "String": {
+      "index": 255856,
+      "key": "string_acoustic_006-091-127"
+    },
+    "Vocal": {
+      "index": 278870,
+      "key": "vocal_synthetic_004-039-127"
+    }
+  },
+  "early_region_seconds": 0.64,
+  "note_off_seconds": 3.0
+}
