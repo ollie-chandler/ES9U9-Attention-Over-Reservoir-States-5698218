@@ -36,7 +36,7 @@ cache_final/
 The retained result directories and diagnostic JSON files are tracked so that the numerical outputs underlying the dissertation can be inspected without regenerating the large intermediate state caches.
 
 
-Notebook 04 regenerates the state-regime diagnostics reported in Tables F.1 to F.3 and F.5 using the fixed 500-recording training sample and writes them to `state_regime_diagnostics.json`. It also computes `conditioning_diagnostics.json`, which is the source of Table F.4. These diagnostics support Appendix F and do not alter the primary experimental pipeline.
+Notebook 04 regenerates the state-regime diagnostics reported in Tables F.1 to F.3 and F.5 using the fixed 500-recording training sample and writes them to `state_regime_diagnostics.json`. It also computes `conditioning_diagnostics.json` in the dissertation figures output directory, which is the source of Table F.4. These diagnostics support Appendix F and do not alter the primary experimental pipeline.
 
 ## Data
 
@@ -126,6 +126,7 @@ The definitive dissertation experiments were run on the following system. The ex
 | NumPy | 2.3.5 |
 | SciPy | 1.15.3 |
 | scikit-learn | 1.8.0 |
+| joblib | 1.5.3 |
 | librosa | 0.11.0 |
 | pandas | 3.0.1 |
 | matplotlib | 3.10.8 |
