@@ -137,6 +137,8 @@ The installed `nvcc` toolkit was CUDA 12.0, while the PyTorch 2.11.0 build used 
 
 ## Estimated Runtimes
 
+Runtimes are calculated from the final run used for the results on the system described above, these time estimates may vary system to system
+
 | Notebook | Estimated runtime |
 |---|---:|
 | 01_ESN_Reservoir_Selection | ~10 hr |
